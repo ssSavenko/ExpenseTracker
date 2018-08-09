@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,6 +56,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ExpensesContents\Accounts\AccountsUserController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExpensesContents\Bills\BillsUserController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExpensesContents\Expenses\ExpensesUserController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +76,21 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Command\Command.cs" />
+    <Compile Include="Command\DelegateCommand.cs" />
+    <Compile Include="ExpensesContents\Accounts\AccountsUserController.xaml.cs">
+      <DependentUpon>AccountsUserController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExpensesContents\Accounts\AccountsViewModel.cs" />
+    <Compile Include="ExpensesContents\Bills\BillsUserController.xaml.cs">
+      <DependentUpon>BillsUserController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExpensesContents\Bills\BillsViewModel.cs" />
+    <Compile Include="ExpensesContents\Expenses\ExpensesViewModel.cs" />
+    <Compile Include="ExpensesContents\Expenses\ExpensesUserController.xaml.cs">
+      <DependentUpon>ExpensesUserController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -92,6 +121,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Icons\Account.png" />
+    <Resource Include="Icons\ApplicationIcon.ico" />
+    <Resource Include="Icons\Award.png" />
+    <Resource Include="Icons\Brush.png" />
+    <Resource Include="Icons\Car.png" />
+    <Resource Include="Icons\Cart.png" />
+    <Resource Include="Icons\Checklist.png" />
+    <Resource Include="Icons\Compass.png" />
+    <Resource Include="Icons\CreditCard.png" />
+    <Resource Include="Icons\Direction.png" />
+    <Resource Include="Icons\Eye.png" />
+    <Resource Include="Icons\Flask.png" />
+    <Resource Include="Icons\Internet.png" />
+    <Resource Include="Icons\Jewelry.png" />
+    <Resource Include="Icons\Key.png" />
+    <Resource Include="Icons\Mail.png" />
+    <Resource Include="Icons\Mountain.png" />
+    <Resource Include="Icons\Phone.png" />
+    <Resource Include="Icons\Sales.png" />
+    <Resource Include="Icons\Wallet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,6 +23,8 @@ namespace ExpenseTracker
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new MainViewModel();
         }
     }
 }

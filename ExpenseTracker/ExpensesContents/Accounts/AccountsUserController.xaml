@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="ExpenseTracker.ExpensesContents.AccountsUserController"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid MinWidth="350" MinHeight="500" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="100"></RowDefinition>
+            <RowDefinition MinHeight="400"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0">Name:</Label>
+            <Label Grid.Row="1">Icon:</Label>
+            <TextBox Grid.Column="1" Margin="7,6"></TextBox>
+            <WrapPanel Grid.Column="1" Grid.Row="1" Margin="7,6">
+                <WrapPanel.Resources>
+                    <ControlTemplate x:Key="CheckBoxImage" TargetType="{x:Type CheckBox}">
+                        <ContentPresenter Width="20" Height="20"/>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="LightBlue"/>
+                        </Trigger>
+                    </ControlTemplate>
+                </WrapPanel.Resources>
+                <CheckBox Width="20" Background="White BorderBrush="White">
+                    <Image Source="/Icons/CreditCard.png" Margin="0" Width="15" Height="20" HorizontalAlignment="Center"/>
+                </CheckBox>
+                <Button Height="20" Width="20" Background="White" BorderBrush="White">
+                    <Image Source="/Icons/Internet.png" Width="15" Height="20"/>
+                </Button>
+                <Button Height="20" Width="20" Background="White" BorderBrush="White">
+                    <Image Source="/Icons/Jewelry.png" Width="15" Height="20"/>
+                </Button>
+                <Button Height="20" Width="20" Background="White" BorderBrush="White">
+                    <Image Source="/Icons/Sales.png" Width="15" Height="20"/>
+                </Button>
+                <Button Height="20" Width="20" Background="White" BorderBrush="White">
+                    <Image Source="/Icons/Wallet.png" Width="15" Height="20"/>
+                </Button>
+            </WrapPanel>
+            <Button Grid.Row="2" Grid.Column="1" Margin="6,7">Add</Button>
+        </Grid>
+    </Grid>
+</UserControl>

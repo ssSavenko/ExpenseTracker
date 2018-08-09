@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExpenseTracker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="500" MinHeight="500" MinWidth="400">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Grid.Row ="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Button Height="20" Width="70" HorizontalAlignment="Center" VerticalAlignment="Top" Command="{Binding Path=ShowAcountsUserWindow}" Margin="0,10,0,0" >
+                        Accounts
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Height="20" Width="70" HorizontalAlignment="Center" Command="{Binding Path=ShowExpensesUserWindow}">
+                        Expenses
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Button Height="20" Width="70" HorizontalAlignment="Center" Command="{Binding Path=ShowBillsUserWindow}">
+                        Bills
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <ContentPresenter Content="{Binding Path=CurrentUserWindow}"/>
+        </Grid>
     </Grid>
 </Window>
