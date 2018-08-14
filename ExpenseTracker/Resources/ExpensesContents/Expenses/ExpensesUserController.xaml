@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="ExpenseTracker.ExpensesContents.ExpensesUserController"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid  MinHeight="500" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="100"></RowDefinition>
+            <RowDefinition MinHeight="400"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="33.6"></RowDefinition>
+                <RowDefinition MaxHeight="55"></RowDefinition>
+                <RowDefinition Height="34"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0">Name:</Label>
+            <Label Grid.Row="1">Icon:</Label>
+            <TextBox Grid.Column="1" Margin="7,6"/>
+            <Border  Grid.Column="1" Grid.Row="1" Margin="7,6" BorderBrush="Black" BorderThickness="0.3">
+            <WrapPanel  MaxHeight="55">
+                <RadioButton Width="20" Background="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Account.png" Margin="0" Width="15" Height="20" HorizontalAlignment="Center"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Award.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Brush.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Car.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Cart.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/CheckList.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Compass.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Direction.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Eye.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Flask.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Internet.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Jewelry.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Key.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Mail.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Mountain.png" Width="15" Height="20"/>
+                </RadioButton>
+                <RadioButton Height="20" Width="20" Background="White" BorderBrush="White" Template="{StaticResource CheckBoxImage}">
+                    <Image Source="/Resources/Icons/Phone.png" Width="15" Height="20"/>
+                </RadioButton>
+                </WrapPanel>
+                </Border>
+                <Button Grid.Row="2" Grid.Column="1" Margin="6,7">Add</Button>
+        </Grid>
+    </Grid>
+</UserControl>

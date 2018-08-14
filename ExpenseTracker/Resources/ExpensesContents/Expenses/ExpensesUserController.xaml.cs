@@ -8,5 +8,10 @@ namespace ExpenseTracker.ExpensesContents
         {
             InitializeComponent();
         }
+
+        private void RowDefinition_CleanUpVirtualizedItem(object sender, CleanUpVirtualizedItemEventArgs e)
+        {
+
+        }
     }
 }

@@ -56,15 +56,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ExpensesContents\Accounts\AccountsUserController.xaml">
+    <Page Include="Resources\ExpensesContents\Accounts\AccountsUserController.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ExpensesContents\Bills\BillsUserController.xaml">
+    <Page Include="Resources\ExpensesContents\Bills\BillsUserController.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ExpensesContents\Expenses\ExpensesUserController.xaml">
+    <Page Include="Resources\ExpensesContents\Expenses\ExpensesUserController.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -78,16 +78,16 @@
     </Compile>
     <Compile Include="Command\Command.cs" />
     <Compile Include="Command\DelegateCommand.cs" />
-    <Compile Include="ExpensesContents\Accounts\AccountsUserController.xaml.cs">
+    <Compile Include="Resources\ExpensesContents\Accounts\AccountsUserController.xaml.cs">
       <DependentUpon>AccountsUserController.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ExpensesContents\Accounts\AccountsViewModel.cs" />
-    <Compile Include="ExpensesContents\Bills\BillsUserController.xaml.cs">
+    <Compile Include="Resources\ExpensesContents\Accounts\AccountsViewModel.cs" />
+    <Compile Include="Resources\ExpensesContents\Bills\BillsUserController.xaml.cs">
       <DependentUpon>BillsUserController.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ExpensesContents\Bills\BillsViewModel.cs" />
-    <Compile Include="ExpensesContents\Expenses\ExpensesViewModel.cs" />
-    <Compile Include="ExpensesContents\Expenses\ExpensesUserController.xaml.cs">
+    <Compile Include="Resources\ExpensesContents\Bills\BillsViewModel.cs" />
+    <Compile Include="Resources\ExpensesContents\Expenses\ExpensesViewModel.cs" />
+    <Compile Include="Resources\ExpensesContents\Expenses\ExpensesUserController.xaml.cs">
       <DependentUpon>ExpensesUserController.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainViewModel.cs" />
@@ -95,6 +95,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Resources\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -122,28 +126,27 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Icons\Account.png" />
-    <Resource Include="Icons\ApplicationIcon.ico" />
-    <Resource Include="Icons\Award.png" />
-    <Resource Include="Icons\Brush.png" />
-    <Resource Include="Icons\Car.png" />
-    <Resource Include="Icons\Cart.png" />
-    <Resource Include="Icons\Checklist.png" />
-    <Resource Include="Icons\Compass.png" />
-    <Resource Include="Icons\CreditCard.png" />
-    <Resource Include="Icons\Direction.png" />
-    <Resource Include="Icons\Eye.png" />
-    <Resource Include="Icons\Flask.png" />
-    <Resource Include="Icons\Internet.png" />
-    <Resource Include="Icons\Jewelry.png" />
-    <Resource Include="Icons\Key.png" />
-    <Resource Include="Icons\Mail.png" />
-    <Resource Include="Icons\Mountain.png" />
-    <Resource Include="Icons\Phone.png" />
-    <Resource Include="Icons\Sales.png" />
-    <Resource Include="Icons\Wallet.png" />
+    <Resource Include="Resources\Icons\Account.png" />
+    <Resource Include="Resources\Icons\ApplicationIcon.ico" />
+    <Resource Include="Resources\Icons\Award.png" />
+    <Resource Include="Resources\Icons\Brush.png" />
+    <Resource Include="Resources\Icons\Car.png" />
+    <Resource Include="Resources\Icons\Cart.png" />
+    <Resource Include="Resources\Icons\Checklist.png" />
+    <Resource Include="Resources\Icons\Compass.png" />
+    <Resource Include="Resources\Icons\CreditCard.png" />
+    <Resource Include="Resources\Icons\Direction.png" />
+    <Resource Include="Resources\Icons\Eye.png" />
+    <Resource Include="Resources\Icons\Flask.png" />
+    <Resource Include="Resources\Icons\Internet.png" />
+    <Resource Include="Resources\Icons\Jewelry.png" />
+    <Resource Include="Resources\Icons\Key.png" />
+    <Resource Include="Resources\Icons\Mail.png" />
+    <Resource Include="Resources\Icons\Mountain.png" />
+    <Resource Include="Resources\Icons\Phone.png" />
+    <Resource Include="Resources\Icons\Sales.png" />
+    <Resource Include="Resources\Icons\Wallet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
